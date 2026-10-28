@@ -27,7 +27,7 @@ This repository contains the data, simulation inputs, potentials, and plotting s
 │
 └── scripts/                   # Notes on data processing workflow
 
-📝 Notes on Input Files
+## 📝 Notes on Input Files
 
 · Representative Samples: The inputs/ directory contains representative sample files rather than the complete set of calculations. These samples are sufficient to demonstrate the simulation settings (e.g., cutoffs, k-points, ensemble settings) used in this work.
 · RASPA Inputs: Due to the large number of files and relatively large size, the complete input files for RASPA (GCMC simulations) are provided as a compressed archive (inputs/raspa/*.zip).
@@ -36,7 +36,7 @@ This repository contains the data, simulation inputs, potentials, and plotting s
     · P. E. Blöchl, Phys. Rev. B 50, 17953 (1994).
     · G. Kresse and D. Joubert, Phys. Rev. B 59, 1758 (1999).
 
-📊 Data and Figure Reproduction
+## 📊 Data and Figure Reproduction
 
 To ensure full transparency and reproducibility:
 
@@ -45,7 +45,7 @@ To ensure full transparency and reproducibility:
 3. Origin Projects: The original Origin project files (.opju) are provided in the origin_files/ folder for direct inspection of the plotting settings and styles.
 4. Data Processing Workflow: The raw simulation outputs were processed manually using GUI software. Please refer to scripts/README.md for the detailed data extraction and processing workflow.
 
-💻 Software Environment
+## 💻 Software Environment
 
 The simulations and analyses in this work were performed using the following software:
 
