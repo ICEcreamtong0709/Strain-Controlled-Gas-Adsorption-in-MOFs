@@ -122,4 +122,3 @@ Please cite the following references when using the PAW potentials:
 ## License
 
 This project is licensed under the MIT License. See the `LICENSE` file for details.
-```
