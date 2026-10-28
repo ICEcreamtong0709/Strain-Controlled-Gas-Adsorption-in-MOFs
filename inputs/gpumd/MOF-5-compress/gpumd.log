@@ -1,0 +1,197 @@
+
+***************************************************************
+*                 Welcome to use GPUMD                        *
+*     (Graphics Processing Units Molecular Dynamics)          *
+*                     version 5.0                             *
+*              This is the gpumd executable                   *
+***************************************************************
+
+
+---------------------------------------------------------------
+Compiling options:
+---------------------------------------------------------------
+
+DEBUG is off: Use different PRNG seeds for different runs.
+
+---------------------------------------------------------------
+GPU information:
+---------------------------------------------------------------
+
+number of GPUs = 1
+Device id:                   0
+    Device name:             Tesla V100-SXM2-32GB
+    Compute capability:      7.0
+    Amount of global memory: 31.7325 GB
+    Number of SMs:           80
+
+---------------------------------------------------------------
+Started running GPUMD.
+---------------------------------------------------------------
+
+
+---------------------------------------------------------------
+Started initializing positions and related parameters.
+---------------------------------------------------------------
+
+Number of atoms is 11448.
+Use periodic boundary conditions along x.
+Use periodic boundary conditions along y.
+Use periodic boundary conditions along z.
+Box matrix h = [a, b, c] is
+    7.7496002000e+01    0.0000000000e+00    0.0000000000e+00
+    0.0000000000e+00    7.7496002000e+01    0.0000000000e+00
+    0.0000000000e+00    0.0000000000e+00    7.7496002000e+01
+Inverse box matrix g = inv(h) is
+    1.2903891481e-02    0.0000000000e+00    0.0000000000e+00
+    0.0000000000e+00    1.2903891481e-02    0.0000000000e+00
+    0.0000000000e+00    0.0000000000e+00    1.2903891481e-02
+Do not specify initial velocities here.
+Have no grouping method.
+There are 4 atom types.
+    864 atoms of type 0.
+    2592 atoms of type 1.
+    5184 atoms of type 2.
+    2808 atoms of type 3.
+Initialized velocities with default T = 300 K.
+
+---------------------------------------------------------------
+Finished initializing positions and related parameters.
+---------------------------------------------------------------
+
+
+---------------------------------------------------------------
+Started executing the commands in run.in.
+---------------------------------------------------------------
+
+Use the NEP3 potential with 4 atom types.
+    type 0 (Zn with Z = 30).
+    type 1 (H with Z = 1).
+    type 2 (C with Z = 6).
+    type 3 (O with Z = 8).
+    radial cutoff = 6 A.
+    angular cutoff = 4 A.
+    MN_radial = 52.
+    enlarged MN_radial = 65.
+    enlarged MN_angular = 28.
+    n_max_radial = 12.
+    n_max_angular = 8.
+    basis_size_radial = 12.
+    basis_size_angular = 8.
+    l_max_3body = 4.
+    l_max_4body = 2.
+    l_max_5body = 0.
+    ANN = 58-80-1.
+    number of neural network parameters = 4801.
+    number of descriptor parameters = 4000.
+    total number of parameters = 8801.
+    Add DFT-D3:
+        potential cutoff = 12 Angstrom
+        coordination number cutoff = 6 Angstrom
+        functional = pbe
+            s6 = 1
+            s8 = 0.7875
+            a1 = 0.4289
+            a2 = 2.34992 Angstrom
+Time step for this run is 0.5 fs.
+Initialized velocities with input T = 300 K.
+Use NPT ensemble for this run.
+    choose the SCR method.
+    initial temperature is 300 K.
+    final temperature is 300 K.
+    tau_T is 100 time_step.
+    pressure_xx is 0 GPa.
+    pressure_yy is 0 GPa.
+    pressure_zz is 0 GPa.
+    modulus_xx is 100 GPa.
+    modulus_yy is 100 GPa.
+    modulus_zz is 100 GPa.
+    tau_p is 1000 time_step.
+Dump thermo every 1000 steps.
+Run 100000 steps.
+    10000 steps completed.
+    20000 steps completed.
+    30000 steps completed.
+    40000 steps completed.
+    50000 steps completed.
+    60000 steps completed.
+    70000 steps completed.
+    80000 steps completed.
+    90000 steps completed.
+    100000 steps completed.
+
+---------------------------------------------------------------
+Time used for this run = 793.448 second.
+Speed of this run = 1.44282e+06 atom*step/second.
+---------------------------------------------------------------
+
+Use NVT ensemble for this run.
+    choose the Berendsen method.
+    initial temperature is 300 K.
+    final temperature is 300 K.
+    tau_T is 100 time_step.
+Dump thermo every 1000 steps.
+Run 50000 steps.
+    5000 steps completed.
+    10000 steps completed.
+    15000 steps completed.
+    20000 steps completed.
+    25000 steps completed.
+    30000 steps completed.
+    35000 steps completed.
+    40000 steps completed.
+    45000 steps completed.
+    50000 steps completed.
+
+---------------------------------------------------------------
+Time used for this run = 397.594 second.
+Speed of this run = 1.43966e+06 atom*step/second.
+---------------------------------------------------------------
+
+Use NPT ensemble for this run.
+    choose the SCR method.
+    initial temperature is 300 K.
+    final temperature is 300 K.
+    tau_T is 100 time_step.
+    pressure_xx is 0 GPa.
+    pressure_yy is 0 GPa.
+    pressure_zz is 0 GPa.
+    modulus_xx is 100 GPa.
+    modulus_yy is 100 GPa.
+    modulus_zz is 100 GPa.
+    tau_p is 1000 time_step.
+Deform the box.
+    strain rates are (-7.7496e-06, 0, 0) A / step.
+    apply strain in x direction.
+Dump thermo every 1000 steps.
+Run 600000 steps.
+    60000 steps completed.
+    120000 steps completed.
+    180000 steps completed.
+    240000 steps completed.
+    300000 steps completed.
+    360000 steps completed.
+    420000 steps completed.
+    480000 steps completed.
+    540000 steps completed.
+    600000 steps completed.
+
+---------------------------------------------------------------
+Time used for this run = 4655.37 second.
+Speed of this run = 1.47546e+06 atom*step/second.
+---------------------------------------------------------------
+
+
+---------------------------------------------------------------
+Finished executing the commands in run.in.
+---------------------------------------------------------------
+
+
+---------------------------------------------------------------
+Time used = 5846.488845 s.
+---------------------------------------------------------------
+
+
+---------------------------------------------------------------
+Finished running GPUMD.
+---------------------------------------------------------------
+

@@ -1,0 +1,24 @@
+potential       nep.txt
+dftd3           pbe 12 6
+time_step       0.5
+
+velocity        300
+
+ensemble        npt_scr 300 300 100 0 0 0 100 100 100 1000   
+dump_thermo     1000
+run             100000
+
+ensemble        nvt_ber 300 300 100 
+dump_thermo     1000
+run             50000
+
+ensemble        npt_scr 300 300 100 0 0 0 100 100 100 1000
+
+deform          -7.9029e-6  0  0   1  0  0
+#3×3×3的HKUST-1压缩到6%
+dump_thermo     1000
+dump_xyz         -1 1 2000 compress.xyz
+run             600000
+
+
+
