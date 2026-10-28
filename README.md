@@ -27,6 +27,7 @@ This repository contains the data, simulation inputs, potentials, and plotting s
 │
 └── scripts/                   # Notes on data processing workflow
 
+## 📂 Repository Structure
 ## 📝 Notes on Input Files
 
 · Representative Samples: The inputs/ directory contains representative sample files rather than the complete set of calculations. These samples are sufficient to demonstrate the simulation settings (e.g., cutoffs, k-points, ensemble settings) used in this work.
