@@ -1,57 +1,125 @@
 # Strain-Controlled Gas Adsorption in Metal–Organic Frameworks
 
-This repository contains the data, simulation inputs, potentials, and plotting source files to support the findings presented in the manuscript:
+This repository contains the structural models, simulation inputs, potential files, processed datasets, and supporting materials for the study reported in the manuscript:
 
 > **"Strain-Controlled Gas Adsorption in Metal–Organic Frameworks: Competing Effects of Pore Volume and Adsorption Affinity"**  
 > *Computational Materials Science* (Manuscript No.: COMMAT-D-26-04604)
-> 
-> Authors: Tongtong Li, Xitai Cai, Yanghao Luo, Haowei Wang, Feiyu Zhou, Wei Qiu, Libo Li, Yilun Liu, Penghua Ying, Shengying Yue
 
-## 📂 Repository Structure
+**Authors:** Tongtong Li, Xitai Cai, Yanghao Luo, Haowei Wang, Feiyu Zhou, Wei Qiu, Libo Li, Yilun Liu, Penghua Ying, Shengying Yue
+
+---
+
+## Overview
+
+This repository provides the supporting data and simulation assets for investigating how mechanical strain affects gas adsorption in representative metal–organic frameworks (MOFs). The study focuses on the competing roles of pore volume and adsorption affinity under deformation.
+
+The dataset includes:
+- representative MOF crystal structures
+- DFT, MD, and GCMC simulation inputs
+- force-field and adsorption potential definitions
+- processed datasets for figure generation
+- workflow notes for data processing
+
+---
+
+## Repository Structure
 
 ```text
-├── README.md                  # This file
-├── LICENSE                    # MIT License
+.
+├── README.md                         # Project overview
+├── LICENSE                           # MIT License
 │
-├── structures/                # Representative MOF crystal structures (e.g., .cif)
-├── potentials/                # Machine learning potentials (e.g., NEP) and force fields
-├── inputs/                    # Representative simulation input files
-│   ├── gpumd/                 # Sample inputs for GPUMD (NEP-MD)
-│   ├── vasp/                  # Sample INCAR, KPOINTS, POSCAR (No POTCAR)
-│   ├── cp2k/                  # Sample inputs for DFT calculations
-│   └── raspa/                 # GCMC inputs (Provided as .zip due to large file size)
+├── data/                             # Processed numerical data for plotting
 │
-├── data/                      # Processed numerical data for figures (in .xlsx format)
-├── origin_files/              # Origin project files (.opju) for direct plotting
-├── figures/                   # Final high-resolution figures used in the paper
+├── inputs/                           # Representative simulation inputs
+│   ├── cp2k/
+│   ├── gpumd/
+│   ├── raspa/
+│   └── vasp/
 │
-└── scripts/                   # Notes on data processing workflow
+├── potentials/                       # Potential definitions
+│
+├── scripts/                          # Data processing notes
+│
+└── structures/                       # Representative MOF structures
 
-## 📂 Repository Structure
-## 📝 Notes on Input Files
+```
 
-· Representative Samples: The inputs/ directory contains representative sample files rather than the complete set of calculations. These samples are sufficient to demonstrate the simulation settings (e.g., cutoffs, k-points, ensemble settings) used in this work.
-· RASPA Inputs: Due to the large number of files and relatively large size, the complete input files for RASPA (GCMC simulations) are provided as a compressed archive (inputs/raspa/*.zip).
-· POTCAR Restrictions: POTCAR files are NOT included in this repository due to copyright restrictions from the VASP license agreement. Users must generate their own POTCAR files from their licensed VASP distribution. The calculations in this work used the PBE functional with the PAW method, generated from the potpaw_PBE.54 library (e.g., Ti_pv, O, C, H).
-  · Please cite the following references if using these potentials:
-    · P. E. Blöchl, Phys. Rev. B 50, 17953 (1994).
-    · G. Kresse and D. Joubert, Phys. Rev. B 59, 1758 (1999).
+---
 
-## 📊 Data and Figure Reproduction
+## Data and Figure Reproducibility
 
-To ensure full transparency and reproducibility:
+The numerical data underlying the plots in the manuscript are provided in the `data/` directory as `.xlsx` files. These datasets can be used to reproduce the reported figures in Origin or other plotting software.
 
-1. Data Tables: All numerical data underlying the plots in the manuscript are provided as .xlsx files in the data/ directory.
-2. Figure Plotting: The final figures were generated using Origin (OriginLab). We provide the exact Excel data tables rather than plotting scripts. Readers can directly import these .xlsx files into Origin or any other plotting software to reproduce the exact figures.
-3. Origin Projects: The original Origin project files (.opju) are provided in the origin_files/ folder for direct inspection of the plotting settings and styles.
-4. Data Processing Workflow: The raw simulation outputs were processed manually using GUI software. Please refer to scripts/README.md for the detailed data extraction and processing workflow.
+The repository includes processed outputs relevant to:
+- pore metrics
+- adsorption uptake
+- Henry constants
+- adsorption enthalpy
+- binding energy
+- stress–strain response
+- density distribution analysis
 
-## 💻 Software Environment
+---
 
-The simulations and analyses in this work were performed using the following software:
+## Structures and Simulation Inputs
 
-· VASP: Version 5.4.4 (PBE-PAW potentials)
-· GPUMD: (For NEP-based molecular dynamics)
-· RASPA: Version 2.0 (For GCMC simulations)
-· CP2K: (For DFT calculations)
-· Origin: (For data visualization)
+The repository contains representative MOF structures used in the study:
+
+- `structures/HKUST-1/`
+- `structures/MOF-5/`
+- `structures/ZIF-8/`
+
+Representative simulation inputs are provided in:
+
+- `inputs/gpumd/` for GPUMD/NEP MD
+- `inputs/vasp/` for VASP calculations
+- `inputs/cp2k/` for DFT calculations
+- `inputs/raspa/` for GCMC calculations
+
+---
+
+## Potential Files
+
+Potential definitions for adsorption and molecular simulation are included in:
+
+- `potentials/adsorption/`
+- `potentials/forcefield/`
+- `potentials/nep/`
+
+The adsorption parameters include representative definitions for CO2, H2, and water models.
+
+---
+
+## Software Environment
+
+The simulations and analyses were performed using the following software:
+
+| Software | Version / Usage |
+|----------|-----------------|
+| VASP | 5.4.4 (PBE-PAW calculations) |
+| GPUMD | NEP-based molecular dynamics |
+| RASPA | 2.0 (GCMC simulations) |
+| CP2K | DFT calculations |
+| Origin | Data visualization and figure preparation |
+| VisIt | 3D density distribution visualization |
+
+---
+
+## Notes
+
+- The `inputs/` directory contains representative example files rather than the complete set of all calculations.
+- RASPA input files are provided in compressed form where appropriate due to size.
+- POTCAR files are not included in this repository because of VASP licensing restrictions.
+- The calculations in this work used the PBE functional with the PAW method, based on the `potpaw_PBE.54` library.
+
+Please cite the following references when using the PAW potentials:
+- P. E. Blöchl, *Phys. Rev. B* 50, 17953 (1994).
+- G. Kresse and D. Joubert, *Phys. Rev. B* 59, 1758 (1999).
+
+---
+
+## License
+
+This project is licensed under the MIT License. See the `LICENSE` file for details.
+```
