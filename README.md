@@ -3,7 +3,6 @@
 This repository contains the structural models, simulation inputs, potential files, processed datasets, and supporting materials for the study reported in the manuscript:
 
 > **"Strain-Controlled Gas Adsorption in Metal–Organic Frameworks: Competing Effects of Pore Volume and Adsorption Affinity"**  
-> *Computational Materials Science* (Manuscript No.: COMMAT-D-26-04604)
 
 **Authors:** Tongtong Li, Xitai Cai, Yanghao Luo, Haowei Wang, Feiyu Zhou, Wei Qiu, Libo Li, Yilun Liu, Penghua Ying, Shengying Yue
 
